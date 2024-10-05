@@ -9,116 +9,140 @@
     justify-content: flex-start;
     height: 100%;
     margin-top: -20px; /* Move the whole container up */
-  }
-  
-  /* Patient header container for image and info on the right panel */
-  .patient-header-right {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Patient header container for image and info on the right panel */
+.patient-header-right {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     justify-content: flex-start; /* Align everything to the left */
-  }
-  
-  /* Patient image placeholder on the right panel */
-  .patient-image-right {
+}
+
+/* Patient image placeholder on the right panel */
+.patient-image-right {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin-right: 10px; /* Space between image and text */
-  }
-  
-  /* Wrapper for the patient name and more info icon on the right panel */
-  .patient-info-wrapper-right {
+}
+
+/* Wrapper for the patient name and more info icon on the right panel */
+.patient-info-wrapper-right {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align text and icon to the left */
-  }
-  
-  /* Patient name styling on the right panel */
-  .patient-name-right {
+}
+
+/* Patient name styling on the right panel */
+.patient-name-right {
     font-size: 18px;
     font-weight: bold;
     color: #333;
     margin-right: 10px; /* Space between name and more info icon */
-  }
-  
-  /* More Info icon styling on the right panel */
-  .more-info-icon-right {
+}
+
+/* More Info icon styling on the right panel */
+.more-info-icon-right {
     width: 20px;
     height: 20px;
     cursor: pointer;
-  }
-  
-  /* Document upload section styling */
-  .document-upload {
+}
+
+/* Ensure that the document section aligns with the Notes section */
+.document-upload-container,
+.notes-section-container {
+    padding: 0 10px; /* Add consistent padding to both sections */
+    width: 100%; /* Ensure full width for both sections */
+    box-sizing: border-box;
+}
+
+/* Document upload section styling */
+.document-upload {
     margin-bottom: 20px;
-  }
-  
-  .document-preview {
+}
+
+.document-preview {
     display: flex;
     gap: 10px;
     margin-top: 10px;
-  }
-  
-  .document-preview img {
+}
+
+.document-preview img {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 5px;
-  }
-  
-  /* Notes section styling */
-  .notes-section {
+}
+
+/* Notes section styling */
+.notes-section {
     margin-bottom: 20px;
     position: relative;
-  }
-  
-  .notes-section textarea {
+}
+
+/* Textarea styling */
+.notes-textarea {
     width: 100%;
     height: 100px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    font-size: 16px;
+    font-size: 14px; /* Reduce the font size */
     resize: none;
-  }
-  
-  /* Speech-to-text button styling */
-  .notes-section button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .notes-section button img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Button container to align the button to the right */
-  .button-container-right {
+    box-sizing: border-box;
+}
+
+/* Button container to align the button to the right */
+.button-container-right {
     display: flex;
     justify-content: flex-end; /* Align button to the right */
     padding-right: 10px;
-  }
-  
- .generate-report-btn-right {
-    background-color: #007bff;
+}
+
+/* Spinner inside button */
+.spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1); /* Light gray background */
+    border-left-color: #0060B9; /* Blue spinner color */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 8px; /* Space between spinner and text */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.generate-report-btn-right {
+    background-color: #0060B9; /* Updated color */
     color: white;
-    padding: 8px 15px; /* Reduced padding */
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .generate-report-btn-right:hover {
-    background-color: #0056b3;
-  }
-  
-  
+    display: flex;
+    align-items: center; /* Align spinner and text */
+    justify-content: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.generate-report-btn-right:disabled {
+    background-color: #cccccc; /* Gray out when disabled */
+    cursor: not-allowed;
+}
+
+.generate-report-btn-right:hover:not(:disabled) {
+    background-color: #004a8c; /* Darker shade on hover if not disabled */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}

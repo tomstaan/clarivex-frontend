@@ -6,7 +6,8 @@ import patientPlaceholder from '../assets/images/patient-image-placeholder.png';
 
 const patients = [
   { id: 1, name: 'John Doe', age: 52 },
-  { id: 2, name: 'Sam Smith', age: 45 },
+  { id: 2, name: 'Lily Morgan', age: 37 },
+  { id: 3, name: 'Jack Turner', age: 28 },
 ];
 
 const PatientList = ({ onPatientSelect }) => {

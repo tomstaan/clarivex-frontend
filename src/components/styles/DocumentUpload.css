@@ -1,7 +1,7 @@
 /* Container for the document upload section */
 .document-upload-container {
     margin-top: -15px;
-    padding: 10px;
+    padding: 0 10px; /* Ensure consistent padding */
     background-color: white;
     width: 100%; /* Full width to align with Notes section */
     box-sizing: border-box;
@@ -27,9 +27,10 @@
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    padding: 5px;
+    padding: 5px 0; /* Remove side padding to align with the title */
     width: 100%;
     box-sizing: border-box;
+    align-items: flex-start; /* Align items to the top */
   }
   
   /* Individual document item */
@@ -47,6 +48,11 @@
     margin: 0 4px; /* Space between items */
   }
   
+  /* Remove the left margin from the first document item */
+  .document-item:first-child {
+    margin-left: 0; /* Ensure alignment with the title */
+  }
+  
   /* Document thumbnail (image preview) */
   .document-thumbnail {
     width: 70px;
@@ -56,16 +62,19 @@
     margin-bottom: 5px;
   }
   
-  /* Styling for the upload icon and input */
+  /* Styling for the upload button and input */
   .upload-more {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     background-color: transparent;
     border: none;
     position: relative;
-    margin-left: 10px; /* Space between last document and icon */
+    min-width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto; /* Center the upload button horizontally */
+    margin-left: -5px; /* Reduce space between upload button and other items */
   }
   
   /* Icon for the upload button */

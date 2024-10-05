@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/DocumentUpload.css'; // Import the CSS file for styling
 import sampleScanDocument from '../assets/images/sample-patient-scan-document.jpg'; // Dummy image
-import sampleDocumentImage from '../assets/images/sample-patient-document-image.png'; // Dummy document image
+import sampleDocumentImage from '../assets/images/sample-patient-document-image.jpg'; // Dummy document image
 import uploadIcon from '../assets/images/upload-document-icon.png'; // Upload icon
 
 const DocumentUpload = ({ documents, setDocuments }) => {
@@ -12,8 +12,8 @@ const DocumentUpload = ({ documents, setDocuments }) => {
 
   // Dummy data for now, replace this with dynamic uploaded documents
   const dummyDocuments = [
-    { name: 'sample-patient-scan-document.png', imgSrc: sampleScanDocument },
-    { name: 'sample-patient-document-image.png', imgSrc: sampleDocumentImage }
+    { name: 'patient-scan-image-1.jpg', imgSrc: sampleScanDocument },
+    { name: 'patient-scan-image-2.jpg', imgSrc: sampleDocumentImage }
   ];
 
   return (
