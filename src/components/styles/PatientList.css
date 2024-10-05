@@ -1,0 +1,78 @@
+.patient-list-container {
+    background-color: #fff; /* White background for the patient list container */
+    height: 100%; /* Make the patient list take up the full height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .patient-list-child-container {
+    background-color: #F8F8F8; /* Light gray background for the patient list container */
+    border-radius: 5px;
+    height: 100%; /* Make the patient list take up the full height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-header {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* 10px padding around the logo and text */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between logo header and patient list */
+  }
+  
+  .logo-header .logo {
+    width: 40px; /* Adjust the logo size */
+    margin-right: 10px; /* Space between the logo and text */
+  }
+  
+  .logo-header .tool-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .patient-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Position title on left and add-patient icon on right */
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .patient-title {
+    font-size: 16px;
+    font-weight: 500; /* Medium-bold text */
+    color: #0060b9; /* The specified blue color */
+  }
+  
+  .add-patient-icon {
+    width: 20px; /* Adjust size of the add-patient icon */
+    cursor: pointer; /* Add cursor pointer for clickable action */
+  }
+  
+  .patient-list {
+    flex-grow: 1;
+    padding: 0; /* Remove padding to ensure the patient items take up full width */
+    overflow-y: auto; /* Make the patient list scrollable */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .patient-item {
+    padding: 10px;
+    margin: 0; /* Remove margin between patient items */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent; /* Transparent background for unselected patients */
+    width: 100%; /* Ensure the patient item takes up full width */
+    display: flex;
+    align-items: center; /* Vertically align the patient name */
+  }
+  
+  .patient-item.selected {
+    background-color: #dff4ff; /* Blue background for selected patient */
+    border-radius: 5px;
+  }
+  

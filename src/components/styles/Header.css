@@ -1,0 +1,32 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 60px;
+    padding: 0 30px; /* 30px padding from left and right */
+    border-bottom: 1px solid #ddd; /* Add a slight border at the bottom */
+  }
+  
+  .company-logo {
+    width: 60px; /* Adjust the logo width */
+    margin-left: 0px; /* 30px from the left */
+  }
+  
+  .doctor-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .doctor-name {
+    margin-right: 15px; /* Space between the name and the profile button */
+    font-weight: bold;
+    font-size: 13px; /* Adjust the font size */
+  }
+  
+  .doctor-profile-button {
+    width: 15px; /* Profile button size */
+    height: 15px;
+    cursor: pointer; /* Show pointer cursor */
+  }
+  

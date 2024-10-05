@@ -1,0 +1,21 @@
+/* Main container with visible padding/margin */
+.main-container {
+    background-color: #D9D9D9; /* Gray background for the container */
+    padding: 15px;
+    height: calc(100vh - 40px - 20px); /* Full viewport height minus header and margin */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    overflow: hidden; /* Hide overflow from the main container */
+  }
+  
+  /* Inner content is scrollable */
+  .main-container > * {
+    background-color: white; /* Ensure inner components have white background */
+    flex-grow: 1; /* Make sure inner components take up the remaining space */
+    overflow-y: auto; /* Allow vertical scrolling within inner components */
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in size calculations */
+  }
+  

@@ -1,0 +1,20 @@
+.logo-header {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+    padding: 10px; /* 10px padding around the logo and text */
+    background-color: white; /* White background for the logo header */
+    margin-bottom: 10px; /* Add some space below the header */
+  }
+  
+  .logo {
+    width: 40px; /* Adjust the logo width */
+    margin-left: 10px; /* Space between the text and the logo */
+  }
+  
+  .tool-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
