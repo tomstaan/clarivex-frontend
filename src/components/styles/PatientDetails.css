@@ -1,0 +1,124 @@
+/* Container for patient details on the right panel */
+.patient-details-container-right {
+    padding: 0px;
+    padding-top: 5px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin-top: -20px; /* Move the whole container up */
+  }
+  
+  /* Patient header container for image and info on the right panel */
+  .patient-header-right {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: flex-start; /* Align everything to the left */
+  }
+  
+  /* Patient image placeholder on the right panel */
+  .patient-image-right {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between image and text */
+  }
+  
+  /* Wrapper for the patient name and more info icon on the right panel */
+  .patient-info-wrapper-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and icon to the left */
+  }
+  
+  /* Patient name styling on the right panel */
+  .patient-name-right {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px; /* Space between name and more info icon */
+  }
+  
+  /* More Info icon styling on the right panel */
+  .more-info-icon-right {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* Document upload section styling */
+  .document-upload {
+    margin-bottom: 20px;
+  }
+  
+  .document-preview {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .document-preview img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /* Notes section styling */
+  .notes-section {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .notes-section textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  /* Speech-to-text button styling */
+  .notes-section button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .notes-section button img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Button container to align the button to the right */
+  .button-container-right {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    padding-right: 10px;
+  }
+  
+ .generate-report-btn-right {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .generate-report-btn-right:hover {
+    background-color: #0056b3;
+  }
+  
+  

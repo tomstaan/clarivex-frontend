@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles/PatientList.css';
 import clarityLogo from '../assets/images/clarity-tool-logo.png'; // Import the logo image
 import addPatientIcon from '../assets/images/add-patient.png'; // Import the add patient icon
+import patientPlaceholder from '../assets/images/patient-image-placeholder.png'; // Import the patient image placeholder
 
 const patients = [
   { id: 1, name: 'John Doe', age: 52 },
@@ -23,20 +24,22 @@ const PatientList = ({ onPatientSelect }) => {
         <img src={clarityLogo} alt="Clarity Tool Logo" className="logo" />
         <span className="tool-text">Clarity AI Diagnosis Tool</span>
       </div>
-      
+
       <div className="patient-list-child-container">
         <div className="patient-header">
           <span className="patient-title">Patients</span>
           <img src={addPatientIcon} alt="Add Patient" className="add-patient-icon" />
         </div>
 
-        <div className="patient-list">
+        <div className="patient-list-content">
           {patients.map((patient) => (
             <div
               key={patient.id}
               className={`patient-item ${selectedPatient?.id === patient.id ? 'selected' : ''}`}
               onClick={() => handleSelect(patient)}
             >
+              {/* Patient Image Placeholder */}
+              <img src={patientPlaceholder} alt="Patient" className="patient-image" />
               <span>{patient.name}</span>
             </div>
           ))}

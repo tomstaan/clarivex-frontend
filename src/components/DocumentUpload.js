@@ -1,4 +1,8 @@
 import React from 'react';
+import './styles/DocumentUpload.css'; // Import the CSS file for styling
+import sampleScanDocument from '../assets/images/sample-patient-scan-document.jpg'; // Dummy image
+import sampleDocumentImage from '../assets/images/sample-patient-document-image.png'; // Dummy document image
+import uploadIcon from '../assets/images/upload-document-icon.png'; // Upload icon
 
 const DocumentUpload = ({ documents, setDocuments }) => {
   const handleUpload = (event) => {
@@ -6,16 +10,39 @@ const DocumentUpload = ({ documents, setDocuments }) => {
     setDocuments([...documents, ...files]);
   };
 
+  // Dummy data for now, replace this with dynamic uploaded documents
+  const dummyDocuments = [
+    { name: 'sample-patient-scan-document.png', imgSrc: sampleScanDocument },
+    { name: 'sample-patient-document-image.png', imgSrc: sampleDocumentImage }
+  ];
+
   return (
-    <div className="document-upload">
-      <label htmlFor="upload">
-        <img src="/upload-document-icon.png" alt="Upload" />
-      </label>
-      <input id="upload" type="file" multiple onChange={handleUpload} />
-      <div className="document-preview">
-        {documents.map((doc, index) => (
-          <img key={index} src={URL.createObjectURL(doc)} alt="document" />
+    <div className="document-upload-container">
+      <h3 className="documents-title">Documents</h3>
+
+      {/* Divider Line */}
+      <hr className="divider-line" />
+
+      {/* Document Preview Carousel */}
+      <div className="document-carousel">
+        {dummyDocuments.map((doc, index) => (
+          <div key={index} className="document-item">
+            <img src={doc.imgSrc} alt={doc.name} className="document-thumbnail" />
+            <span className="document-name">{doc.name}</span>
+          </div>
         ))}
+
+        {/* Upload More Files Button */}
+        <label className="upload-more">
+          <img src={uploadIcon} alt="Upload More" className="upload-icon" />
+          <input
+            id="upload"
+            type="file"
+            multiple
+            onChange={handleUpload}
+            className="upload-input"
+          />
+        </label>
       </div>
     </div>
   );

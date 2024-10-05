@@ -1,0 +1,89 @@
+/* Container for the document upload section */
+.document-upload-container {
+    margin-top: -15px;
+    padding: 10px;
+    background-color: white;
+    width: 100%; /* Full width to align with Notes section */
+    box-sizing: border-box;
+  }
+  
+  /* Title for the documents section */
+  .documents-title {
+    font-size: 18px;
+    color: #0060b9;
+    margin-bottom: 10px;
+  }
+  
+  /* Divider line below the Documents title */
+  .divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 15px;
+  }
+  
+  /* Horizontal scrolling for the document carousel */
+  .document-carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Individual document item */
+  .document-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 4px; /* Space between items */
+  }
+  
+  /* Document thumbnail (image preview) */
+  .document-thumbnail {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for the upload icon and input */
+  .upload-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-left: 10px; /* Space between last document and icon */
+  }
+  
+  /* Icon for the upload button */
+  .upload-icon {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Hide the actual file input */
+  .upload-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  

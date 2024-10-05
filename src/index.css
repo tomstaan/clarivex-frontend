@@ -20,7 +20,7 @@ body {
 
 .patient-details {
   width: 75%;
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
   overflow-y: auto; /* Ensure patient details are scrollable */
 }

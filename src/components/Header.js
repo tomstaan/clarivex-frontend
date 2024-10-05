@@ -8,7 +8,7 @@ const Header = () => {
     <header className="app-header">
       <img src={logo} alt="Company Logo" className="company-logo" />
       <div className="doctor-info">
-        <span className="doctor-name">Dr. Sam Harris, MD (Neurology Department)</span>
+        <span className="doctor-name">Dr. Sam Harris, MD (Dermatology Department)</span>
         <img src={doctorProfileIcon} alt="Doctor Profile" className="doctor-profile-button" />
       </div>
     </header>
