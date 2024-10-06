@@ -53,10 +53,10 @@
 /* Speech-to-text button styling */
 .speech-button {
   position: absolute;
-  bottom: 10px; /* Move the button to the bottom-right of the textarea */
+  bottom: 10px; /* Keep the button at the bottom-right of the textarea */
   right: 10px;
-  background-color: #0060B9; /* Updated button color */
-  border-radius: 5px; /* Keep the button square with slightly rounded corners */
+  background-color: #0060B9; /* Default blue color */
+  border-radius: 50%; /* Make the button round */
   width: 45px;
   height: 45px;
   display: flex;
@@ -68,39 +68,31 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
+.speech-button img {
+  width: 24px;
+  height: 24px;
+}
+
 .speech-button:hover {
   background-color: #004a8c; /* Slightly darker shade on hover */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
 }
 
-/* Button container to align the button to the right */
-.button-container-right {
-  display: flex;
-  justify-content: flex-end; /* Align button to the right */
-  padding-right: 10px;
-  margin-top: 20px; /* Added more space at the top */
+/* Recording (red) state of the button */
+.speech-button.recording {
+  background-color: #FF4A4A; /* Red background for recording */
 }
 
-.generate-report-btn-right {
-  background-color: #0060B9; /* Updated color to match the speech-to-text button */
+/* Cancel icon inside the red recording button */
+.cancel-icon {
+  font-size: 20px;
   color: white;
-  padding: 12px 25px; /* Larger padding to make the button bigger */
-  border: none;
-  border-radius: 5px;
-  font-size: 18px; /* Increase font size for a larger button */
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  font-weight: bold;
+  pointer-events: none;
 }
 
-.generate-report-btn-right:hover {
-  background-color: #004a8c; /* Slightly darker shade on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
-}
-
-
-/* Speech-to-text icon styling */
-.speech-button img {
-  width: 24px; /* Keep the icon smaller and nicer */
-  height: 24px;
+/* Processing state styling */
+.processing-indicator {
+  font-size: 14px;
+  color: #999;
 }
