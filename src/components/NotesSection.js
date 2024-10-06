@@ -95,21 +95,19 @@ const NotesSection = () => {
 
         {/* Recording Button */}
         <div className="speech-buttons">
-          {!isProcessing ? (
-            <button
-              className={`speech-button ${isRecording ? 'recording' : ''}`}
-              onClick={isRecording ? stopRecording : startRecording}
-              disabled={isProcessing}
-            >
-              {isRecording ? (
-                <div className="cancel-icon">&times;</div> // Red cancel button with "×" symbol
-              ) : (
-                <img src={speechIcon} alt="Start Recording" />
-              )}
-            </button>
-          ) : (
-            <div className="processing-indicator">Processing...</div>
-          )}
+          <button
+            className={`speech-button ${isRecording ? 'recording' : ''}`}
+            onClick={isRecording ? stopRecording : startRecording}
+            disabled={isProcessing}
+          >
+            {isProcessing ? (
+              <div className="spinner"></div> // Show spinner when processing
+            ) : isRecording ? (
+              <div className="cancel-icon">&times;</div> // Red cancel button with "×" symbol
+            ) : (
+              <img src={speechIcon} alt="Start Recording" />
+            )}
+          </button>
         </div>
       </div>
     </div>
